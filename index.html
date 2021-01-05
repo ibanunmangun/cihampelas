@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/Trail_2.js"></script>
+        <script src="data/Point_of_Interest_3.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[-6.906224150064684,107.58351435547164],[-6.8796045248879025,107.62936832966167]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        var layer_GoogleSatellite_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
+        });
+        layer_GoogleSatellite_0;
+        var layer_GoogleStreet_1 = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
+        });
+        layer_GoogleStreet_1;
+        map.addLayer(layer_GoogleStreet_1);
+        function pop_Trail_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['OID_'] !== null ? Autolinker.link(feature.properties['OID_'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? Autolinker.link(feature.properties['Name'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Shape_Leng'] !== null ? Autolinker.link(feature.properties['Shape_Leng'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Trail_2_0() {
+            return {
+                pane: 'pane_Trail_2',
+                opacity: 1,
+                color: 'rgba(219,30,42,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Trail_2');
+        map.getPane('pane_Trail_2').style.zIndex = 402;
+        map.getPane('pane_Trail_2').style['mix-blend-mode'] = 'normal';
+        var layer_Trail_2 = new L.geoJson(json_Trail_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Trail_2',
+            layerName: 'layer_Trail_2',
+            pane: 'pane_Trail_2',
+            onEachFeature: pop_Trail_2,
+            style: style_Trail_2_0,
+        });
+        bounds_group.addLayer(layer_Trail_2);
+        map.addLayer(layer_Trail_2);
+        function pop_Point_of_Interest_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['OID_'] !== null ? Autolinker.link(feature.properties['OID_'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? Autolinker.link(feature.properties['Name'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['X'] !== null ? Autolinker.link(feature.properties['X'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Y'] !== null ? Autolinker.link(feature.properties['Y'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Keterangan'] !== null ? Autolinker.link(feature.properties['Keterangan'].toLocaleString(), {truncate: {length: 30, location: 'smart'}}) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Point_of_Interest_3_0() {
+            return {
+                pane: 'pane_Point_of_Interest_3',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(141,90,153,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Point_of_Interest_3');
+        map.getPane('pane_Point_of_Interest_3').style.zIndex = 403;
+        map.getPane('pane_Point_of_Interest_3').style['mix-blend-mode'] = 'normal';
+        var layer_Point_of_Interest_3 = new L.geoJson(json_Point_of_Interest_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Point_of_Interest_3',
+            layerName: 'layer_Point_of_Interest_3',
+            pane: 'pane_Point_of_Interest_3',
+            onEachFeature: pop_Point_of_Interest_3,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_Point_of_Interest_3_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Point_of_Interest_3);
+        map.addLayer(layer_Point_of_Interest_3);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/Point_of_Interest_3.png" /> Point_of_Interest': layer_Point_of_Interest_3,'<img src="legend/Trail_2.png" /> Trail': layer_Trail_2,"Google Street": layer_GoogleStreet_1,"Google Satellite": layer_GoogleSatellite_0,}).addTo(map);
+        setBounds();
+        var i = 0;
+        layer_Point_of_Interest_3.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Name'] !== null?String('<div style="color: #000000; font-size: 7pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['Name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Point_of_Interest_3'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_Point_of_Interest_3]);
+        map.on("zoomend", function(){
+            resetLabels([layer_Point_of_Interest_3]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_Point_of_Interest_3]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_Point_of_Interest_3]);
+        });
+        </script>
+    </body>
+</html>

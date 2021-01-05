@@ -1,0 +1,32 @@
+var json_Point_of_Interest_3 = {
+"type": "FeatureCollection",
+"name": "Point_of_Interest_3",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OID_": "1", "Name": "Dapur Dahapati", "X": 107.6023587, "Y": -6.8873413, "Keterangan": "Point of Interest" }, "geometry": { "type": "Point", "coordinates": [ 107.602358700000082, -6.887341299999946 ] } },
+{ "type": "Feature", "properties": { "OID_": "2", "Name": "Kelom Geulis Keng", "X": 107.6038648, "Y": -6.8871041, "Keterangan": "Point of Interest" }, "geometry": { "type": "Point", "coordinates": [ 107.603864800000053, -6.887104099999931 ] } },
+{ "type": "Feature", "properties": { "OID_": "3", "Name": "SMAN 2 Bandung", "X": 107.6033944, "Y": -6.8891593, "Keterangan": "Point of Interest" }, "geometry": { "type": "Point", "coordinates": [ 107.60339440000007, -6.8891593 ] } },
+{ "type": "Feature", "properties": { "OID_": "4", "Name": "Masjid Mungsolkanas", "X": 107.6047965, "Y": -6.8917507, "Keterangan": "Point of Interest" }, "geometry": { "type": "Point", "coordinates": [ 107.604796500000077, -6.891750699999932 ] } },
+{ "type": "Feature", "properties": { "OID_": "5", "Name": "ex-Pemandian Tjihampelas", "X": 107.6051111, "Y": -6.8923333, "Keterangan": "Point of Interest" }, "geometry": { "type": "Point", "coordinates": [ 107.605111100000045, -6.892333299999962 ] } },
+{ "type": "Feature", "properties": { "OID_": "6", "Name": "Sentra Jeans", "X": 107.6041944, "Y": -6.8980278, "Keterangan": "Point of Interest" }, "geometry": { "type": "Point", "coordinates": [ 107.60419440000004, -6.898027799999966 ] } },
+{ "type": "Feature", "properties": { "OID_": "7", "Name": "Oncom Raos", "X": 107.6040556, "Y": -6.9021944, "Keterangan": "Point of Interest" }, "geometry": { "type": "Point", "coordinates": [ 107.604055600000038, -6.902194399999928 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "ATM Center Jalan Setiabudi", "X": 107.598718, "Y": -6.880687, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.598718, -6.880687 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Western Union", "X": 107.604337, "Y": -6.886431, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.604337, -6.886431 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Taman Macan Setiabudi", "X": 107.60103, "Y": -6.882923, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.60103, -6.882923 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Masjid Jami Al-Muamalah", "X": 107.597462, "Y": -6.882017, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.597462, -6.882017 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Gereja Baptis Indonesia Cipaganti", "X": 107.601991, "Y": -6.888191, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.601991, -6.888191 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "SPBU Pertamina 34-40111", "X": 107.602007, "Y": -6.887652, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.602007, -6.887652 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Kimia Farma Apotek", "X": 107.601629, "Y": -6.88267, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.601629, -6.88267 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "SPBU Pertamina Cihampelas", "X": 107.603833, "Y": -6.888657, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.603833, -6.888657 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Masjid Al-Aziz", "X": 107.604072, "Y": -6.890689, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.604072, -6.890689 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Rumah Sakit Advent Bandung", "X": 107.603248, "Y": -6.891856, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.603248, -6.891856 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Cihampelas Walk", "X": 107.604714, "Y": -6.89489, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.604714, -6.89489 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "GKI Pasteur", "X": 107.602804, "Y": -6.899903, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.602804, -6.899903 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Masjid Baiturahman", "X": 107.60473, "Y": -6.899065, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.60473, -6.899065 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Pos Polisi Sukajadi", "X": 107.597718, "Y": -6.90044, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.597718, -6.90044 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Money Changer Restu Valuta Mas", "X": 107.604077, "Y": -6.903817, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.604077, -6.903817 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Masjid Sabilusalam", "X": 107.60363, "Y": -6.902754, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.60363, -6.902754 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "SPBU Pertamina 34-40102", "X": 107.606985, "Y": -6.904465, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.606985, -6.904465 ] } },
+{ "type": "Feature", "properties": { "OID_": "0", "Name": "Apotik Kimia Farma 14", "X": 107.604123, "Y": -6.906039, "Keterangan": "Fasilitas Umum" }, "geometry": { "type": "Point", "coordinates": [ 107.604123, -6.906039 ] } }
+]
+}
